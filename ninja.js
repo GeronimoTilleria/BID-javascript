@@ -18,3 +18,18 @@ class Ninja {
         this.salud += 10;
     }
 }
+
+class Sensei extends Ninja {
+    constructor(nombre, salud = 200, velocidad = 10, fuerza = 10, sabiduria = 10){
+        super(nombre, salud, velocidad, fuerza);
+        this.sabiduria = sabiduria;
+    }
+
+    speakWisdom() {
+        super.drinkSake();
+        super.showStats();
+    }
+}
+
+const sensei = new Sensei("Geronimo");
+sensei.speakWisdom();
